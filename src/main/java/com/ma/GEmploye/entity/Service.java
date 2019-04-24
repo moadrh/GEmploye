@@ -7,6 +7,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
+import javax.persistence.Transient;
 
 @Entity
 public class Service {
@@ -14,6 +15,7 @@ public class Service {
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private int id;
 	private String nom;
+	@Transient
 	@OneToMany(mappedBy="service")
 	private List<Employe> employes;
 	
