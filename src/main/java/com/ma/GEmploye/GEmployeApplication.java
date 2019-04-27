@@ -33,16 +33,16 @@ public class GEmployeApplication implements CommandLineRunner  {
 		//service.create(new Service(1,"info"));
 		//service.create(new Service(2,"finance"));
 		
-		//employe.create(new Employe(1,"moustaoui","salah",new Date(),"femme",service.findById(2)));
+		//employe.create(new Employe(1,"moustaoui","salah",new Date(),"Femme",service.findById(2)));
 		
-		for(Employe e : employe.findAll()) {
-			System.out.println(e.getService().getNom());
-		}
+//		for(Employe e : employe.findAll()) {
+//			System.out.println(e.getService().getNom());
+//		}
 		//service.delete(service.findById(1));
 		
-		Employe e = employe.findById(1);
-		e.setSexe("homme");
-		employe.update(e);
+//		Employe e = employe.findById(1);
+//		e.setSexe("homme");
+//		employe.update(e);
 		
 	}
 

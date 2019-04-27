@@ -13,12 +13,13 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.ma.GEmploye.entity.Employe;
 import com.ma.GEmploye.entity.Service;
 import com.ma.GEmploye.service.ServiceService;
 
 @RestController
 @RequestMapping("/api/service")
-@CrossOrigin
+@CrossOrigin()
 public class ServiceController {
 	
 	@Autowired
@@ -32,6 +33,11 @@ public class ServiceController {
 	@PostMapping 
 	public void addService(@RequestBody Service service) {
 		serviceService.create(service);
+	}
+	
+	@GetMapping("/find/{id}")
+	public Service getServiceById(@PathVariable int id){
+		return serviceService.findById(id);
 	}
 	
 	@PutMapping

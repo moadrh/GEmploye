@@ -34,6 +34,12 @@ public class EmployeController {
 		employeService.create(employe);
 	}
 	
+	@GetMapping("/{id}")
+	public Employe getEmployeById(@PathVariable int id){
+		return employeService.findById(id);
+	}
+	
+	
 	@PutMapping
 	public void updateEmploye(@RequestBody Employe employe) {
 		employeService.update(employe);

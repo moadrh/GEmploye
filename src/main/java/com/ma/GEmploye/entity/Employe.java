@@ -12,6 +12,8 @@ import javax.persistence.TemporalType;
 
 @Entity
 public class Employe {
+	
+	
 	@Id @GeneratedValue(strategy=GenerationType.IDENTITY)
 	private int id;
 	private String nom;

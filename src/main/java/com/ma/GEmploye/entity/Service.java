@@ -11,6 +11,7 @@ import javax.persistence.Transient;
 
 @Entity
 public class Service {
+	
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private int id;

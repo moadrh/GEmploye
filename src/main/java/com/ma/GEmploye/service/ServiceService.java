@@ -4,6 +4,7 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Primary;
+import org.springframework.data.domain.Example;
 
 import com.ma.GEmploye.dao.IDao;
 import com.ma.GEmploye.entity.Service;
@@ -43,5 +44,6 @@ public class ServiceService implements IDao<Service> {
 	public void delete(Service o) {
          serviceRepo.delete(o);		
 	}
+	
 
 }
